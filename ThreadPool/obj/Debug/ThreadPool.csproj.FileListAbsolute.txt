@@ -1,0 +1,5 @@
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ThreadPool\bin\Debug\ThreadPool.exe.config
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ThreadPool\bin\Debug\ThreadPool.exe
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ThreadPool\bin\Debug\ThreadPool.pdb
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ThreadPool\obj\Debug\ThreadPool.exe
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ThreadPool\obj\Debug\ThreadPool.pdb

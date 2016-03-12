@@ -1,0 +1,12 @@
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterClient\bin\Debug\ServerAddresses.txt
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterClient\bin\Debug\ClusterClient.exe.config
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterClient\bin\Debug\ClusterClient.exe
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterClient\bin\Debug\ClusterClient.pdb
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterClient\bin\Debug\FluentCommandLineParser.dll
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterClient\bin\Debug\log4net.dll
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterClient\bin\Debug\FluentCommandLineParser.pdb
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterClient\bin\Debug\FluentCommandLineParser.xml
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterClient\bin\Debug\log4net.xml
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterClient\obj\Debug\ClusterClient.csprojResolveAssemblyReference.cache
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterClient\obj\Debug\ClusterClient.exe
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterClient\obj\Debug\ClusterClient.pdb

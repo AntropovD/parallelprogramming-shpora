@@ -1,0 +1,75 @@
+[Start of logging]
+[End of logging]
+
+[Start of logging]
+08.03.2016 18:26:22.183 FATAL    1 System.Net.HttpListenerException (0x80004005): Отказано в доступе
+   в System.Net.HttpListener.AddAllPrefixes()
+   в System.Net.HttpListener.Start()
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 13
+   в ClusterServer.Program.Main(String[] args) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 35  
+[End of logging]
+
+[Start of logging]
+08.03.2016 18:26:37.714 FATAL    1 System.Net.HttpListenerException (0x80004005): Отказано в доступе
+   в System.Net.HttpListener.AddAllPrefixes()
+   в System.Net.HttpListener.Start()
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 13
+   в ClusterServer.Program.Main(String[] args) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 35  
+[End of logging]
+
+[Start of logging]
+08.03.2016 18:26:46.911 FATAL    1 System.Net.HttpListenerException (0x80004005): Отказано в доступе
+   в System.Net.HttpListener.AddAllPrefixes()
+   в System.Net.HttpListener.Start()
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 13
+   в ClusterServer.Program.Main(String[] args) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 35  
+[End of logging]
+
+[Start of logging]
+08.03.2016 18:27:05.059 FATAL    1 System.Net.HttpListenerException (0x80004005): Отказано в доступе
+   в System.Net.HttpListener.AddAllPrefixes()
+   в System.Net.HttpListener.Start()
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 13
+   в ClusterServer.Program.Main(String[] args) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 35  
+[End of logging]
+
+[Start of logging]
+[End of logging]
+
+[Start of logging]
+08.03.2016 18:27:19.802 FATAL    1 System.Net.HttpListenerException (0x80004005): Отказано в доступе
+   в System.Net.HttpListener.AddAllPrefixes()
+   в System.Net.HttpListener.Start()
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 13
+   в ClusterServer.Program.Main(String[] args) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 35  
+[End of logging]
+
+[Start of logging]
+08.03.2016 18:27:50.588 FATAL    1 System.Net.HttpListenerException (0x80004005): Отказано в доступе
+   в System.Net.HttpListener.AddAllPrefixes()
+   в System.Net.HttpListener.Start()
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 13
+   в ClusterServer.Program.Main(String[] args) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 35  
+[End of logging]
+
+[Start of logging]
+08.03.2016 18:27:58.897 FATAL   10 System.Net.HttpListenerException (0x80004005): Отказано в доступе
+   в System.Net.HttpListener.AddAllPrefixes()
+   в System.Net.HttpListener.Start()
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 13
+   в ClusterServer.Program.Main(String[] args) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 35  
+[End of logging]
+
+[Start of logging]
+08.03.2016 22:07:00.708 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Dispose(Boolean disposing)
+   в System.IO.Stream.Close()
+   в System.Net.HttpListenerResponse.Dispose(Boolean disposing)
+   в System.Net.HttpListenerResponse.System.IDisposable.Dispose()
+   в System.Net.HttpListenerResponse.Close()
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 32  
+[Start of logging]
+08.03.2016 22:53:57.962 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 54
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 24  

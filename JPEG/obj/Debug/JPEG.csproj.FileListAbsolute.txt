@@ -1,0 +1,8 @@
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\JPEG\bin\Debug\JPEG.exe.config
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\JPEG\bin\Debug\JPEG.exe
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\JPEG\bin\Debug\JPEG.pdb
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\JPEG\bin\Debug\nunit.framework.dll
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\JPEG\bin\Debug\nunit.framework.xml
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\JPEG\obj\Debug\JPEG.csprojResolveAssemblyReference.cache
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\JPEG\obj\Debug\JPEG.exe
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\JPEG\obj\Debug\JPEG.pdb

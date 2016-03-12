@@ -1,0 +1,8 @@
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\LockFree\bin\Debug\LockFree.exe.config
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\LockFree\bin\Debug\LockFree.exe
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\LockFree\bin\Debug\LockFree.pdb
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\LockFree\bin\Debug\nunit.framework.dll
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\LockFree\bin\Debug\nunit.framework.xml
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\LockFree\obj\Debug\LockFree.csprojResolveAssemblyReference.cache
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\LockFree\obj\Debug\LockFree.exe
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\LockFree\obj\Debug\LockFree.pdb

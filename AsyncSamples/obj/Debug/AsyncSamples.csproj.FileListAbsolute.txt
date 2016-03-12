@@ -1,0 +1,5 @@
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\AsyncSamples\bin\Debug\AsyncSamples.exe.config
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\AsyncSamples\bin\Debug\AsyncSamples.exe
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\AsyncSamples\bin\Debug\AsyncSamples.pdb
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\AsyncSamples\obj\Debug\AsyncSamples.exe
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\AsyncSamples\obj\Debug\AsyncSamples.pdb

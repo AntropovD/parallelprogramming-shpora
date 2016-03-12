@@ -1,0 +1,6 @@
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\QuantumOfSwitching\bin\Debug\QuantumOfSwitching.exe.config
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\QuantumOfSwitching\bin\Debug\QuantumOfSwitching.exe
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\QuantumOfSwitching\bin\Debug\QuantumOfSwitching.pdb
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\QuantumOfSwitching\obj\Debug\QuantumOfSwitching.csprojResolveAssemblyReference.cache
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\QuantumOfSwitching\obj\Debug\QuantumOfSwitching.exe
+C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\QuantumOfSwitching\obj\Debug\QuantumOfSwitching.pdb
