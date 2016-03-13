@@ -17,12 +17,18 @@ namespace ClusterClient.Clients
 
             double replicaTimeout = timeout.TotalMilliseconds / ReplicaAddresses.Length;
 
-            var tasks = new List<Task<string>>();
+            var timeoutTask = Task.Delay(timeout);
+            var tasks = new List<Task>();
+            tasks.Add(timeoutTask);
             foreach (var replica in replicaSequence)
             {
                 foreach (var task in tasks)
+                {
+                    if (task == timeoutTask && task.Status==TaskStatus.RanToCompletion)
+                        throw new TimeoutException();
                     if (task.Status == TaskStatus.RanToCompletion)
-                        return task.Result;
+                        return ((Task<string>) task).Result;
+                }
 
                 var webRequest = CreateRequest($"{replica}?query={query}");
                 Log.InfoFormat("Processing {0}", webRequest.RequestUri);
@@ -31,9 +37,9 @@ namespace ClusterClient.Clients
                 await Task.WhenAny(currentTask, Task.Delay(TimeSpan.FromMilliseconds(replicaTimeout)));
                 if (currentTask.Status != TaskStatus.RanToCompletion)
                 {
-                    if (currentTask.IsCompleted)
+                    if (!currentTask.IsCompleted)
                     {
-                        grayList.Dict.TryAdd(webRequest.RequestUri.AbsoluteUri, DateTime.Now.Add(GrayListWaitTime));
+                        grayList.Dict.TryAdd(grayList.FormatKey(webRequest.RequestUri), DateTime.Now.Add(GrayListWaitTime));
                         continue;
                     }
                     tasks.Add(currentTask);
@@ -41,8 +47,12 @@ namespace ClusterClient.Clients
                 return currentTask.Result;
             }
             foreach (var task in tasks)
+            {
+                if (task == timeoutTask)
+                    throw new TimeoutException();
                 if (task.Status == TaskStatus.RanToCompletion)
-                    return task.Result;
+                    return ((Task<string>)task).Result;
+            }
             throw new TimeoutException();
         }
 

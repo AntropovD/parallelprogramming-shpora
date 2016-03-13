@@ -28,7 +28,7 @@ namespace ClusterClient.Clients
                 var finishedTask = await Task.WhenAny(resultTask, Task.Delay(TimeSpan.FromMilliseconds(replicaTimeout)));
                 if (finishedTask == timeoutTask)
                 {
-                    grayList.Dict.TryAdd(webRequest.RequestUri.AbsoluteUri, DateTime.Now.Add(GrayListWaitTime);
+                    grayList.Dict.TryAdd(grayList.FormatKey(webRequest.RequestUri), DateTime.Now.Add(GrayListWaitTime));
                     continue;
                 }
                 if (resultTask.Status != TaskStatus.RanToCompletion)

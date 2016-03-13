@@ -17,6 +17,7 @@ namespace ClusterClient.Clients
         protected TimeSpan GrayListWaitTime => TimeSpan.FromSeconds(5.0);
         protected string[] ReplicaAddresses { get; set; }
         protected ConcurrentDictionary<string, Tuple<long, int>> ReplicaStatistics { get; set; }
+
         public GrayList grayList;
 
         protected ClusterClientBase(string[] replicaAddresses)
@@ -49,7 +50,7 @@ namespace ClusterClient.Clients
                     var result = await new StreamReader(response.GetResponseStream(), Encoding.UTF8).ReadToEndAsync();
                     Log.InfoFormat("Response from {0} received in {1} ms", request.RequestUri, timer.ElapsedMilliseconds);
 
-                    var key = "http://" + request.RequestUri.Authority + request.RequestUri.AbsolutePath;
+                    var key = grayList.FormatKey(request.RequestUri);
                     ReplicaStatistics.AddOrUpdate(key, Tuple.Create(timer.ElapsedMilliseconds, 1),
                         (s, tuple) => Tuple.Create(tuple.Item1 + timer.ElapsedMilliseconds, tuple.Item2 + 1));
                     return result;
@@ -100,6 +101,11 @@ namespace ClusterClient.Clients
                 Dict.Clear();
             var currTime = DateTime.Now;
             Dict = new ConcurrentDictionary<string, DateTime>(Dict.Where(pair => pair.Value <= currTime));
+        }
+
+        public string FormatKey(Uri Uri)
+        {
+            return "http://" + Uri.Authority + Uri.AbsolutePath;
         }
     }
 
