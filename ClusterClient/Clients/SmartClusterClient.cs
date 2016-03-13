@@ -28,15 +28,13 @@ namespace ClusterClient.Clients
                 Log.InfoFormat("Processing {0}", webRequest.RequestUri);
 
                 var currentTask = ProcessRequestInternalAsync(webRequest);
-
                 await Task.WhenAny(currentTask, Task.Delay(TimeSpan.FromMilliseconds(replicaTimeout)));
                 if (currentTask.Status != TaskStatus.RanToCompletion)
                 {
                     if (currentTask.IsCompleted)
                     {
+                        grayList.Dict.TryAdd(webRequest.RequestUri.AbsoluteUri, DateTime.Now.Add(GrayListWaitTime));
                         continue;
-                        
-//                        GrayList.TryAdd(webRequest.RequestUri.AbsoluteUri, DateTime.Now.Add(GrayListWaitTime));
                     }
                     tasks.Add(currentTask);
                 }
