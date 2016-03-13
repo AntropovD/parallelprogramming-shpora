@@ -3,6 +3,7 @@ using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using log4net;
 using log4net.Config;
 
@@ -33,13 +34,6 @@ namespace ClusterServer
                                };
 
                 listener.StartProcessingRequests(CreateCallback(parsedArguments));
-                while (true)
-                {
-                    if (Console.KeyAvailable)
-                        if (Console.ReadKey(true).Key == ConsoleKey.Escape)
-                            break;
-                }
-                Console.WriteLine("Server finished");
             }
             catch (Exception e)
             {
@@ -47,9 +41,9 @@ namespace ClusterServer
             }
         }
 
-        private static Action<HttpListenerContext> CreateCallback(ServerArguments parsedArguments)
+        private static Func<HttpListenerContext, Task> CreateCallback(ServerArguments parsedArguments)
         {
-            return context =>
+            return async context =>
                    {
                        var currentRequestId = Interlocked.Increment(ref RequestId);
                        Console.WriteLine("Thread #{0} received request #{1} at {2}",
@@ -58,7 +52,7 @@ namespace ClusterServer
                        Thread.Sleep(parsedArguments.MethodDuration);
 
                        var encryptedBytes = GetBase64HashBytes(context.Request.QueryString["query"], Encoding.UTF8);
-                       await context.Response.OutputStream.Write(encryptedBytes, 0, encryptedBytes.Length);
+                       await context.Response.OutputStream.WriteAsync(encryptedBytes, 0, encryptedBytes.Length);
 
                        Console.WriteLine("Thread #{0} sent response #{1} at {2}",
                            Thread.CurrentThread.ManagedThreadId, currentRequestId,

@@ -9,3 +9,14 @@ C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServe
 C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\obj\Debug\ClusterServer.csprojResolveAssemblyReference.cache
 C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\obj\Debug\ClusterServer.exe
 C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\obj\Debug\ClusterServer.pdb
+C:\Users\Dmitry\Desktop\pp\ClusterServer\bin\Debug\ClusterServer.exe.config
+C:\Users\Dmitry\Desktop\pp\ClusterServer\bin\Debug\ClusterServer.exe
+C:\Users\Dmitry\Desktop\pp\ClusterServer\bin\Debug\ClusterServer.pdb
+C:\Users\Dmitry\Desktop\pp\ClusterServer\bin\Debug\FluentCommandLineParser.dll
+C:\Users\Dmitry\Desktop\pp\ClusterServer\bin\Debug\log4net.dll
+C:\Users\Dmitry\Desktop\pp\ClusterServer\bin\Debug\FluentCommandLineParser.pdb
+C:\Users\Dmitry\Desktop\pp\ClusterServer\bin\Debug\FluentCommandLineParser.xml
+C:\Users\Dmitry\Desktop\pp\ClusterServer\bin\Debug\log4net.xml
+C:\Users\Dmitry\Desktop\pp\ClusterServer\obj\Debug\ClusterServer.csprojResolveAssemblyReference.cache
+C:\Users\Dmitry\Desktop\pp\ClusterServer\obj\Debug\ClusterServer.exe
+C:\Users\Dmitry\Desktop\pp\ClusterServer\obj\Debug\ClusterServer.pdb

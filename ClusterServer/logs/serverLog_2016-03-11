@@ -1,0 +1,133 @@
+[Start of logging]
+11.03.2016 12:50:19.157 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 54
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 24  
+11.03.2016 14:11:02.234 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 54
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 24  
+11.03.2016 14:11:39.831 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 54
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 24  
+[Start of logging]
+[End of logging]
+
+[Start of logging]
+[End of logging]
+
+[Start of logging]
+[End of logging]
+
+[Start of logging]
+[End of logging]
+
+[Start of logging]
+11.03.2016 17:49:19.368 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 17:49:41.824 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 17:49:54.148 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 17:49:56.039 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 17:49:57.562 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+[Start of logging]
+11.03.2016 17:50:11.337 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 17:50:31.898 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 17:50:34.698 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 17:50:58.400 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+[Start of logging]
+11.03.2016 17:54:22.239 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 17:54:32.961 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 17:54:40.897 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 17:57:09.454 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 18:02:51.782 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 18:03:28.965 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 18:04:18.780 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 18:06:10.131 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 18:12:14.882 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 18:19:49.557 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 18:32:20.401 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 18:32:48.509 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 18:33:42.383 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Dispose(Boolean disposing)
+   в System.IO.Stream.Close()
+   в System.Net.HttpListenerResponse.Dispose(Boolean disposing)
+   в System.Net.HttpListenerResponse.System.IDisposable.Dispose()
+   в System.Net.HttpListenerResponse.Close()
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 35  
+11.03.2016 18:44:15.119 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+11.03.2016 18:46:49.558 ERROR    1 System.Net.HttpListenerException (0x80004005): Попытка выполнить операцию для несуществующего сетевого подключения
+   в System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   в ClusterServer.Program.<>c__DisplayClass2_0.<CreateCallback>b__0(HttpListenerContext context) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\Program.cs:строка 62
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Action`1 callback) в C:\Users\Dmitry\Desktop\parallelprogramming-shpora2016-c93909d4bc13\ClusterServer\HttpListenerExtensions.cs:строка 27  
+[Start of logging]
+[End of logging]
+
+[Start of logging]
+[End of logging]
+

@@ -14,7 +14,8 @@ namespace ClusterClient.Clients
 
         public async override Task<string> ProcessRequestAsync(string query, TimeSpan timeout)
         {
-            var randomUri = GetReplicaAddress();
+//            var randomUri = GetReplicaAddress();
+            var randomUri = ReplicaAddresses[1];
             var randomWebRequest = CreateRequest(randomUri + "?query=" + query);
             
             Log.InfoFormat("Processing {0}", randomWebRequest.RequestUri);

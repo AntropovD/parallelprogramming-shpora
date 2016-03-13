@@ -9,7 +9,7 @@ namespace ClusterServer
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(HttpListenerExtensions));
         
-        public static async void StartProcessingRequests(this HttpListener listener, Action<HttpListenerContext> callback)
+        public static void StartProcessingRequests(this HttpListener listener, Func<HttpListenerContext, Task> callback )
         {
             listener.Start();
             Console.WriteLine("Server started listening prefixes: {0}", string.Join(";", listener.Prefixes));
@@ -18,11 +18,11 @@ namespace ClusterServer
             {
                 try
                 {
-                    var context = await listener.GetContextAsync();
+                    var context = listener.GetContext();
 
                     try
                     {
-                        Task.Factory.StartNew(() => callback(context));
+                        callback(context);
                     }
                     catch (Exception e)
                     {
