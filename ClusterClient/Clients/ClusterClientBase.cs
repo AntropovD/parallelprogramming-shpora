@@ -17,11 +17,13 @@ namespace ClusterClient.Clients
         protected TimeSpan GrayListWaitTime => TimeSpan.FromSeconds(5.0);
         protected string[] ReplicaAddresses { get; set; }
         protected ConcurrentDictionary<string, Tuple<long, int>> ReplicaStatistics { get; set; }
+        public GrayList grayList;
 
         protected ClusterClientBase(string[] replicaAddresses)
         {
             ReplicaAddresses = replicaAddresses;
             ReplicaStatistics = new ConcurrentDictionary<string, Tuple<long, int>>();
+            grayList = new GrayList(replicaAddresses.Length);
         }
 
         public abstract Task<string> ProcessRequestAsync(string query, TimeSpan timeout);
@@ -60,40 +62,44 @@ namespace ClusterClient.Clients
             }
         }
 
-        protected IEnumerable<string> GetRandomReplicaSequence()
+        protected ReplicasEnumerable GetRandomReplicaSequence()
         {
             var rnd = new Random();
-            return Enumerable.Range(0, ReplicaAddresses.Length)
+            return new ReplicasEnumerable(Enumerable.Range(0, ReplicaAddresses.Length)
                 .OrderBy(i => rnd.Next(ReplicaAddresses.Length))
-                .Select(i => ReplicaAddresses[i]);
+                .Select(i => ReplicaAddresses[i]), grayList);
         }
 
-        protected IEnumerable<string> GetStatisticsReplicaSequence()
+        protected ReplicasEnumerable GetStatisticsReplicaSequence()
         {
             if (ReplicaStatistics.Count == ReplicaAddresses.Length)
-                return ReplicaStatistics.OrderBy(pair => pair.Value.Item1*1.0 / pair.Value.Item2)
-                    .Select(pair => pair.Key);
+                return new ReplicasEnumerable(ReplicaStatistics
+                    .OrderBy(pair => pair.Value.Item1*1.0 / pair.Value.Item2)
+                    .Select(pair => pair.Key),
+                    grayList);
             return GetRandomReplicaSequence();
         }
     }
 
     public class GrayList
     {
-        public ConcurrentDictionary<string, DateTime> list;
+        public ConcurrentDictionary<string, DateTime> Dict { get; set; }
         public int maxGrayListSize;
-
-        public GrayList(ConcurrentDictionary<string, DateTime> grayList, int maxSize)
+        
+        public GrayList(int maxSize)
         {
-            list = grayList;
+            Dict = new ConcurrentDictionary<string, DateTime>();
             maxGrayListSize = maxSize;
         }
 
-        protected void UpdateGrayTable()
+        public void UpdateGrayTable()
         {
-            if (list.Count == 0)
+            if (Dict.Count == 0)
                 return;
+            if (Dict.Count == maxGrayListSize)
+                Dict.Clear();
             var currTime = DateTime.Now;
-            list = new ConcurrentDictionary<string, DateTime>(list.Where(pair => pair.Value <= currTime));
+            Dict = new ConcurrentDictionary<string, DateTime>(Dict.Where(pair => pair.Value <= currTime));
         }
     }
 
@@ -105,7 +111,7 @@ namespace ClusterClient.Clients
         public ReplicasEnumerable(IEnumerable<string> replicas, GrayList grayList)
         {
             this.replicas = replicas;
-             this.grayList = grayList;
+            this.grayList = grayList;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -142,17 +148,17 @@ namespace ClusterClient.Clients
             position = -1;
         }
 
-        public object Current
+        object IEnumerator.Current => Current;
+
+        public string Current
         {
             get
             {
-                var replica = replicas[position];
-                if (grayList.ContainsKey())
-                    return Current;
-
+                grayList.UpdateGrayTable();
+                while (grayList.Dict.ContainsKey(replicas[position]))
+                    MoveNext();
+                return replicas[position];
             }
         }
     }
-
-   
 }

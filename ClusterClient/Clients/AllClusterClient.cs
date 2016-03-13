@@ -23,40 +23,27 @@ namespace ClusterClient.Clients
                 Log.InfoFormat("Processing {0}", webRequest.RequestUri);
                 tasks.Add(ProcessRequestInternalAsync(webRequest));
             }
-            var another = Task.Delay(timeout);
+            var timeoutTask = Task.Delay(timeout);
             tasks.Add(Task.Delay(timeout));
 
-            var firstFinishedTask = await Task.WhenAny(tasks);
-
-            if (firstFinishedTask == another)
+            while (true)
             {
-                throw new TimeoutException();
+                var finishedTask = await Task.WhenAny(tasks);
+                if (finishedTask == timeoutTask)
+                {
+                    throw new TimeoutException();
+//                     тут бы хорошо сделать подобное:
+//                    foreach (var task in tasks)
+//                    {
+//                        if (task.Status != TaskStatus.RanToCompletion)
+//                            grayList.Add(task.Request);
+//                    }
+//                    но из таска нельзя вытащить адрес реквеста, по которому обращались, чтоб передать в серый список
+                }
+                if (finishedTask.Status == TaskStatus.RanToCompletion)
+                    return ((Task<string>) finishedTask).Result;
             }
-            
-                firstFinishedTask = await Task.WhenAny(tasks);
-            
-            return ((Task<string>)firstFinishedTask).Result;
         }
-        
-        //        foreach (var task in tasks.Keys)
-        //            {
-        //                if (!task.IsCompleted)
-        //                    ProcessCancelRequestAsync(tasks[task]);
-        //            }
-        //        private void ProcessCancelRequestAsync(Tuple<string, string> hostnameAndQuery)
-        //        {
-        //            string hostname = hostnameAndQuery.Item1;
-        //            string query = hostnameAndQuery.Item1;
-        //            
-        //            var request = WebRequest.CreateHttp(Uri.EscapeUriString($"{hostname}?abort={query}"));
-        //            request.Proxy = null;
-        //            request.KeepAlive = true;
-        //            request.ServicePoint.UseNagleAlgorithm = false;
-        //            request.ServicePoint.ConnectionLimit = 100500;
-        //
-        //            request.GetResponse();
-        //        }
-
         protected override ILog Log => LogManager.GetLogger(typeof(AllClusterClient));
     }
 }

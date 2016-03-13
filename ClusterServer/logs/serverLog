@@ -1,0 +1,11 @@
+[Start of logging]
+[End of logging]
+
+[Start of logging]
+13.03.2016 15:05:57.206 FATAL    1 System.Net.HttpListenerException (0x80004005): ќтказано в доступе
+   в System.Net.HttpListener.AddAllPrefixes()
+   в System.Net.HttpListener.Start()
+   в ClusterServer.HttpListenerExtensions.StartProcessingRequests(HttpListener listener, Func`2 callback) в C:\Users\Dmitry\Desktop\pp\ClusterServer\HttpListenerExtensions.cs:строка 14
+   в ClusterServer.Program.Main(String[] args) в C:\Users\Dmitry\Desktop\pp\ClusterServer\Program.cs:строка 36  
+[End of logging]
+

@@ -23,7 +23,7 @@ namespace ClusterClient.Clients
             await Task.WhenAny(resultTask, Task.Delay(timeout));
             if (!resultTask.IsCompleted)
             {
-                GrayList.TryAdd(randomUri,  DateTime.Now.Add(GrayListWaitTime));
+                grayList.Dict.TryAdd(randomUri,  DateTime.Now.Add(GrayListWaitTime));
                 throw new TimeoutException();
             }
             return resultTask.Result;
@@ -32,13 +32,13 @@ namespace ClusterClient.Clients
         private string GetReplicaAddress()
         {
             string replica;
-            UpdateGrayTable();
+            grayList.UpdateGrayTable();
 
             var rnd = new Random();
             do
             {
                 replica = ReplicaAddresses[rnd.Next(ReplicaAddresses.Length)];
-            } while (GrayList.ContainsKey(replica));
+            } while (grayList.Dict.ContainsKey(replica));
             return replica;
         }
 

@@ -32,7 +32,7 @@ namespace ClusterClient.Clients
             await Task.WhenAny(resultTask, Task.Delay(timeout));
             if (resultTask.Status != TaskStatus.RanToCompletion)
             {
-                GrayList.TryAdd(myUri, DateTime.Now.Add(GrayListWaitTime));
+                grayList.Dict.TryAdd(myUri, DateTime.Now.Add(GrayListWaitTime));
                 throw new TimeoutException();
             }
             return resultTask.Result;
@@ -41,11 +41,10 @@ namespace ClusterClient.Clients
         private string GetAdequateReplica()
         {
             string replica;
-            UpdateGrayTable();
-            do
-            {
+            grayList.UpdateGrayTable();
+            do { 
                 replica = FindAppropriateReplica();
-            } while (GrayList.ContainsKey(replica));
+            } while (grayList.Dict.ContainsKey(replica));
             return replica;
         }
 
