@@ -8,9 +8,9 @@ using log4net;
 
 namespace ClusterClient.Clients
 {
-    class VisitAllClusterClient : ClusterClientBase
+    class AllClusterClient : ClusterClientBase
     {
-        public VisitAllClusterClient(string[] replicaAddresses) : base(replicaAddresses)
+        public AllClusterClient(string[] replicaAddresses) : base(replicaAddresses)
         {
         }
 
@@ -57,6 +57,6 @@ namespace ClusterClient.Clients
         //            request.GetResponse();
         //        }
 
-        protected override ILog Log => LogManager.GetLogger(typeof(VisitAllClusterClient));
+        protected override ILog Log => LogManager.GetLogger(typeof(AllClusterClient));
     }
 }

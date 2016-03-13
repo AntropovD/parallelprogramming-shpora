@@ -16,13 +16,11 @@ namespace ClusterClient.Clients
     {
         protected TimeSpan GrayListWaitTime => TimeSpan.FromSeconds(5.0);
         protected string[] ReplicaAddresses { get; set; }
-        protected ConcurrentDictionary<string, DateTime> GrayList { get; set; }
         protected ConcurrentDictionary<string, Tuple<long, int>> ReplicaStatistics { get; set; }
 
         protected ClusterClientBase(string[] replicaAddresses)
         {
             ReplicaAddresses = replicaAddresses;
-            GrayList = new ConcurrentDictionary<string, DateTime>();
             ReplicaStatistics = new ConcurrentDictionary<string, Tuple<long, int>>();
         }
 
@@ -49,19 +47,9 @@ namespace ClusterClient.Clients
                     var result = await new StreamReader(response.GetResponseStream(), Encoding.UTF8).ReadToEndAsync();
                     Log.InfoFormat("Response from {0} received in {1} ms", request.RequestUri, timer.ElapsedMilliseconds);
 
-                    Tuple<long, int> mean;
                     var key = "http://" + request.RequestUri.Authority + request.RequestUri.AbsolutePath;
-
-                    //ReplicaStatistics.AddOrUpdate(key, )
-                    if (!ReplicaStatistics.TryGetValue(key, out mean))
-                    {
-                        mean = Tuple.Create(timer.ElapsedMilliseconds, 1);
-                        ReplicaStatistics.TryAdd(key, mean);
-                    }
-                    else
-                        ReplicaStatistics.TryUpdate(key, ReplicaStatistics[key],
-                            Tuple.Create(mean.Item1 + timer.ElapsedMilliseconds, mean.Item2 + 1));
-
+                    ReplicaStatistics.AddOrUpdate(key, Tuple.Create(timer.ElapsedMilliseconds, 1),
+                        (s, tuple) => Tuple.Create(tuple.Item1 + timer.ElapsedMilliseconds, tuple.Item2 + 1));
                     return result;
                 }
             }
@@ -70,14 +58,6 @@ namespace ClusterClient.Clients
                 Log.ErrorFormat("{0}", ex);
                 throw;
             }
-        }
-
-        protected void UpdateGrayTable()
-        {
-            if (GrayList.Count == 0)
-                return;
-            var currTime = DateTime.Now;
-            GrayList = new ConcurrentDictionary<string, DateTime>(GrayList.Where(pair => pair.Value <= currTime));
         }
 
         protected IEnumerable<string> GetRandomReplicaSequence()
@@ -96,4 +76,83 @@ namespace ClusterClient.Clients
             return GetRandomReplicaSequence();
         }
     }
+
+    public class GrayList
+    {
+        public ConcurrentDictionary<string, DateTime> list;
+        public int maxGrayListSize;
+
+        public GrayList(ConcurrentDictionary<string, DateTime> grayList, int maxSize)
+        {
+            list = grayList;
+            maxGrayListSize = maxSize;
+        }
+
+        protected void UpdateGrayTable()
+        {
+            if (list.Count == 0)
+                return;
+            var currTime = DateTime.Now;
+            list = new ConcurrentDictionary<string, DateTime>(list.Where(pair => pair.Value <= currTime));
+        }
+    }
+
+    public class ReplicasEnumerable : IEnumerable
+    {
+        private IEnumerable<string> replicas;
+        public GrayList grayList;
+
+        public ReplicasEnumerable(IEnumerable<string> replicas, GrayList grayList)
+        {
+            this.replicas = replicas;
+             this.grayList = grayList;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return (IEnumerator)GetEnumerator();
+        }
+
+        public MyEnumerator GetEnumerator()
+        {
+            return new MyEnumerator(replicas, grayList);
+        }
+    }
+
+    public class MyEnumerator : IEnumerator
+    {
+        private List<string> replicas;
+        private GrayList grayList;
+        private int position = -1;
+
+        public MyEnumerator(IEnumerable<string> replicas, GrayList grayList)
+        {
+            this.replicas = replicas.ToList();
+            this.grayList = grayList;
+        }
+
+        public bool MoveNext()
+        {
+            position++;
+            return (position < replicas.Count);
+        }
+
+        public void Reset()
+        {
+            position = -1;
+        }
+
+        public object Current
+        {
+            get
+            {
+                var replica = replicas[position];
+                if (grayList.ContainsKey())
+                    return Current;
+
+            }
+        }
+    }
+
+   
 }
