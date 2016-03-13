@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using log4net;
 
@@ -22,7 +23,14 @@ namespace ClusterClient.Clients
                 Log.InfoFormat("Processing {0}", webRequest.RequestUri);
 
                 var resultTask = ProcessRequestInternalAsync(webRequest);
-                await Task.WhenAny(resultTask, Task.Delay(TimeSpan.FromMilliseconds(replicaTimeout)));
+
+                var timeoutTask = Task.Delay(TimeSpan.FromMilliseconds(replicaTimeout));
+                var finishedTask = await Task.WhenAny(resultTask, Task.Delay(TimeSpan.FromMilliseconds(replicaTimeout)));
+                if (finishedTask == timeoutTask)
+                {
+                    grayList.Dict.TryAdd(webRequest.RequestUri.AbsoluteUri, DateTime.Now.Add(GrayListWaitTime);
+                    continue;
+                }
                 if (resultTask.Status != TaskStatus.RanToCompletion)
                     continue;
                 return resultTask.Result;
